@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Albert Sans', sans-serif;
+}
+
+
+h1{
+    color: black;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+h2{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+form{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+form > input {
+    font-size: 1.2rem;
+}
+
+input::placeholder{
+    text-align: left;
+    color: green;
+    padding: 3px 3px;
+}
+
+.todoItems{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.item {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.fa-trash{
+    font-size: 1rem;
+    color: green;
+}
+
+.completed{
+    color: gray;
+    text-decoration: line-through;
+}
+
+.categories{
+    margin-top: 2%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    list-style: none;
+    column-gap: 5px;
+}
+
+.categories li {
+    border: 1px solid green;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+    background-color: green;
+    color: white;
+}
+
+@media screen and (max-width: 600px){
+    body{
+        background-color: rgba(253, 229, 184, 0.911);
+    }
+
+    .categories{
+        margin-top: 2%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        list-style: none;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+
+    .categories li {
+        border: 1px solid green;
+        border-radius: 0.5rem;
+        padding: 0.15rem 0.25rem;
+        text-transform: uppercase;
+        background-color: green;
+        color: white;
+        font-size: 0.7rem;
+    }
+
+    form{
+        text-align: center;
+        margin: 8% auto 4% auto;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    
+    form > input {
+        font-size: 1rem;
+        padding: 0.5rem 0.2rem;
+        margin: 0.2rem 0;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        
+    }
+
+    input:nth-child(3){
+        width: 30%;
+        margin: 3% auto;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+    }
+
+    input::placeholder{
+        text-align: left;
+        color: green;
+        padding: 3px 6px;
+    }
+    
+
+}

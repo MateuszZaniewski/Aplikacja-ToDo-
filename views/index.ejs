@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja ToDo</title>
+</head>
+<body>
+    <h1>Lista rzeczy </h1>
+    <h2>Dodaj rzecz do zrobienia:</h2>
+    <form action="/addTodo" method="POST">
+        <input type="text" placeholder="Rzecz do zrobienia" name="todoItem">
+        <input type="text" placeholder="Kategoria" name="todoCategory">
+        <input type="submit">
+    </form>
+    <ul class="categories">
+        <% for(let k=0; k < items.length; k++){%>
+            <li class="category">
+                <span><%= items[k].category%></span>
+                <% } %> 
+                
+
+    </ul>
+    <ul class="todoItems">
+    <% for(let i=0; i < items.length; i++) {%>
+        <li class="item">
+            <% if(items[i].completed === true) {%>
+                <span class='completed'><%= items[i].thing %></span>
+            <% }else{ %>
+                <span><%= items[i].thing %></span>
+            <% } %>    
+            <span class='fa fa-trash'></span>
+        </li>
+    <% } %>
+    </ul>
+
+    <h2>Pozostałe: <%= left %></h2>
+
+
+
+    <script src='js/main.js'></script>
+</body>
+</html>
